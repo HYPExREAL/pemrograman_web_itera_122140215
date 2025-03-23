@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 200px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#hasil-kalkulator {
+    margin-top: 20px;
+}
