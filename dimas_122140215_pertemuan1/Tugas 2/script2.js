@@ -1,4 +1,3 @@
-// Fungsi untuk kalkulator
 function hitungKalkulator(angka1, angka2, operasi) {
     let hasil = 0;
     switch (operasi) {
@@ -32,7 +31,6 @@ function hitungKalkulator(angka1, angka2, operasi) {
     return hasil;
 }
 
-// Event handler untuk tombol operasi matematika
 function setupButtonHandler(buttonId, operasi, operatorSymbol) {
     document.getElementById(buttonId).addEventListener("click", function() {
         const angka1 = parseFloat(document.getElementById("angka1").value);
@@ -49,7 +47,6 @@ function setupButtonHandler(buttonId, operasi, operatorSymbol) {
     });
 }
 
-// Setup event handlers for each button
 setupButtonHandler("btn-tambah", "tambah", "+");
 setupButtonHandler("btn-kurang", "kurang", "-");
 setupButtonHandler("btn-kali", "kali", "×");
@@ -57,7 +54,6 @@ setupButtonHandler("btn-bagi", "bagi", "÷");
 setupButtonHandler("btn-pangkat", "pangkat", "^");
 setupButtonHandler("btn-modulus", "modulus", "%");
 
-// Special case for square root
 document.getElementById("btn-akar").addEventListener("click", function() {
     const angka1 = parseFloat(document .getElementById("angka1").value);
     

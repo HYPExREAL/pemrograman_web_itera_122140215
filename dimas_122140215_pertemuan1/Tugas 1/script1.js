@@ -3,24 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const addTaskButton = document.getElementById('addTaskButton');
     const taskList = document.getElementById('taskList');
 
-    // Load tasks from localStorage
-    loadTasks();
 
-    // Add task event
+    loadTasks();
     addTaskButton.addEventListener('click', () => {
         const taskText = taskInput.value.trim();
         if (taskText) {
             addTask(taskText);
-            taskInput.value = ''; // Clear input
+            taskInput.value = ''; 
         }
     });
 
-    // Function to add a task
     function addTask(taskText) {
         const li = document.createElement('li');
         li.textContent = taskText;
-
-        // Create a checkbox to mark as done
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.addEventListener('change', () => {
@@ -28,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             saveTasks();
         });
 
-        // Create a delete button
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Hapus';
         deleteButton.addEventListener('click', () => {
@@ -40,10 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
         li.appendChild(deleteButton);
         taskList.appendChild(li);
 
-        saveTasks(); // Save tasks to localStorage
+        saveTasks(); 
     }
 
-    // Function to save tasks to localStorage
     function saveTasks() {
         const tasks = [];
         taskList.querySelectorAll('li').forEach(li => {
@@ -55,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 
-    // Function to load tasks from localStorage
     function loadTasks() {
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         tasks.forEach(task => {
