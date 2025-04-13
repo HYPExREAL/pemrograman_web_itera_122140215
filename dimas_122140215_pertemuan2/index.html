@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priority Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Priority Dashboard</h1>
+      <p>Kelola tugas Anda dengan skala prioritas yang jelas.</p>
+    </header>
+
+    <!-- Two-column layout -->
+    <main class="dashboard">
+      <!-- Left Column: Form Input -->
+      <section class="form-section">
+        <h2>Tambah Tugas</h2>
+        <form id="taskForm">
+          <input type="text" id="taskName" placeholder="Nama Tugas" required>
+          <textarea id="taskDescription" placeholder="Deskripsi Tugas"></textarea>
+          <select id="taskPriority">
+            <option value="low">Prioritas Rendah</option>
+            <option value="medium">Prioritas Sedang</option>
+            <option value="high">Prioritas Tinggi</option>
+          </select>
+          <button type="submit">Tambah Tugas</button>
+        </form>
+      </section>
+
+      <!-- Right Column: Task List -->
+      <section class="task-list-section">
+        <h2>Daftar Tugas</h2>
+        <div id="taskList">
+          <!-- Daftar tugas akan ditampilkan di sini -->
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
