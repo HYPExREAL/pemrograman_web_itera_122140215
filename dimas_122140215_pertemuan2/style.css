@@ -173,3 +173,31 @@
   .task button:hover:nth-child(2) {
     background: #c0392b;
   }
+
+/* Styling for the toggle button */
+#toggleFormButton {
+    padding: 10px 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #toggleFormButton:hover {
+    background: #2980b9;
+  }
+  
+  /* Hide the form section initially */
+  .hidden {
+    display: none;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }

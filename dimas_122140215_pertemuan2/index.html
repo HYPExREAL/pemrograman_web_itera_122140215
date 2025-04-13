@@ -16,8 +16,8 @@
 
     <!-- Two-column layout -->
     <main class="dashboard">
-      <!-- Left Column: Form Input -->
-      <section class="form-section">
+      <!-- Left Column: Hidden Form Input -->
+      <section class="form-section hidden" id="formSection">
         <h2>Tambah Tugas</h2>
         <form id="taskForm">
           <input type="text" id="taskName" placeholder="Nama Tugas" required>
@@ -33,7 +33,10 @@
 
       <!-- Right Column: Task List -->
       <section class="task-list-section">
-        <h2>Daftar Tugas</h2>
+        <div class="task-header">
+          <h2>Daftar Tugas</h2>
+          <button id="toggleFormButton">Tambah Tugas</button>
+        </div>
         <div id="taskList">
           <!-- Daftar tugas akan ditampilkan di sini -->
         </div>
